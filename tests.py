@@ -37,14 +37,14 @@ class TestBooksCollector:
     WRONG_NAME = 'Wrong Name'
 
 
-class TestBooksCollector:
+
     def test_add_rating_to_absent_book_fails(books_collector):
         books_collector.add_new_book(NAME)
         books_collector.set_book_rating(WRONG_NAME, 5)
         assert books_collector.favorites == []
         assert books_collector.books_rating == {NAME: 1}
 
-class TestBookCollector:
+
     def test_cant_set_rating_less_than_one(books_collector):
         books_collector.add_new_book(NAME)
         books_collector.set_book_rating(NAME, 0)
