@@ -20,8 +20,7 @@ class TestBooksCollector:
         # словарь books_rating, который нам возвращает метод get_books_rating, имеет длину 2
         assert len(collector.get_books_rating()) == 2
 
-
-
+class TestBooksCollector:
     def test_add_book(books_collector):
         books_collector.add_new_book(NAME)
         assert books_collector.favorites == []
@@ -36,6 +35,7 @@ def books_collector():
 
     NAME = 'Book Name'
     WRONG_NAME = 'Wrong Name'
+
 
     def test_add_rating_to_absent_book_fails(books_collector):
         books_collector.add_new_book(NAME)
