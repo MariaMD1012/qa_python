@@ -21,7 +21,7 @@ class TestBooksCollector:
         assert len(collector.get_books_rating()) == 2
 
 
-class TestBookCollector:
+
     def test_add_book(books_collector):
         books_collector.add_new_book(NAME)
         assert books_collector.favorites == []
@@ -31,8 +31,6 @@ class TestBookCollector:
 
 
 
-
-@pytest.fixture(scope='function')
 def books_collector():
     return BooksCollector()
 
