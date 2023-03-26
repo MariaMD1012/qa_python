@@ -98,8 +98,6 @@ def books_collector():
         assert [] == result
 
 
-    if__name__ == '__main__':
-    pytest.main()
 
     # напиши свои тесты ниже
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
