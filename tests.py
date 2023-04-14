@@ -44,7 +44,6 @@ class TestBooksCollector:
         collector = BooksCollector()
         collector.add_new_book('Мастер и Маргарита')
         collector.add_book_in_favorites('Королева Марго')
-        collector.favorites == ['Королева Марго']
         assert collector.books_rating == {'Мастер и Маргарита': 1}
 
     def test_add_to_favorites_fails_if_not_in_ratings(self):
@@ -64,7 +63,8 @@ class TestBooksCollector:
         collector = BooksCollector()
         collector.add_new_book('Братья Карамазовы')
         collector.add_book_in_favorites('Война и мир')
-        collector.get_list_of_favorites_books() == ['Братья Карамазовы']
+        assert collector.get_list_of_favorites_books() == []
+
 
     def test_get_books_with_specific_rating_fails_if_wrong_rating(self):
         collector = BooksCollector()
